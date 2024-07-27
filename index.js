@@ -1,10 +1,13 @@
-fetch('https://jsonplaceholder.typicode.com/users')
+function element(){
+    var url ='https://jsonplaceholder.typicode.com/users';
+fetch(url)
     .then(response => response.json())
-    .then(json => {
-        let users = document.getElementById('users');
-        json.forEach(element => {
-            let user = document.createElement('option');
-            user.innerHTML = element.name;
-            users.appendChild(user);
+    .then(data => {
+        var _users = document.getElementById('users');
+        data.forEach(user => {
+            let _option = document.createElement('option');
+            _option.innerHTML = user.name;
+            _users.appendChild(_option);
         });
     })
+}
