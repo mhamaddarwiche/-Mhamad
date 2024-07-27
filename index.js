@@ -1,5 +1,5 @@
-function user()
-{
+
+
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(json => {
@@ -10,4 +10,3 @@ function user()
             users.appendChild(user);
         });
     })
-}
